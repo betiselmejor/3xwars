@@ -13,9 +13,11 @@ import android.widget.ProgressBar;
 public class MainActivity extends AppCompatActivity {
 
     private int CurrentProgress = 0;
+    int i ;
     private ProgressBar progressBar;
     private Button startProgress;
     private Handler manejador= new Handler(Looper.getMainLooper());
+    boolean inActivo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,30 +26,52 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
 
-        progressBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CurrentProgress = CurrentProgress +10;
-                progressBar.setProgress(CurrentProgress);progressBar.setMax(100);
-                if (CurrentProgress==100){
-                    Intent intent = new Intent(MainActivity.this, loginPage.class);
-                    startActivity(intent);
+        progressBar.setMax(100);
+
+
+
+
+    manejador.postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            carrega();
+        }
+    },1000);
+
+
+    }
+
+
+    public void carrega(){
+        if (!inActivo){
+            Thread hilo = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (i<=100){
+                        manejador.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                progressBar.setProgress(i);
+                            }
+                        });
+                        try {
+                            Thread.sleep(10);
+                        }catch (InterruptedException e ){
+                            e.printStackTrace();
+                        }
+                        if(i==100){
+                            Intent a = new Intent(MainActivity.this, loginPage.class);
+                            startActivity(a);
+
+                        }
+                        i++;
+                        inActivo= true;
+                    }
                 }
-            }
-        });
+            });
+            hilo.start();
+        }
 
 
-
-
-//        while(true){
-//            manejador.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    progressBar.setProgress(CurrentProgress);
-//                    CurrentProgress = CurrentProgress +10;
-//
-//                }
-//            },1000);
-//        }
     }
 }
