@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2f2a2a"
+    tools:context=".RandomBattle">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3xWARS"
+        android:fontFamily="@font/snippet"
+        android:textSize="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#00a62c"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/flecha"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random battle"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/snippet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/historial"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        />
+    
+<!--    <Button-->
+<!--        android:layout_width=""-->
+<!--        android:layout_height=""/>-->
+
+</RelativeLayout>

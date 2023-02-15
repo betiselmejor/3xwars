@@ -17,6 +17,7 @@
         android:textColor="#00a62c"/>
 
     <EditText
+        android:id="@+id/usernameET"
         android:layout_width="249dp"
         android:layout_height="43dp"
         android:layout_alignParentTop="true"
@@ -30,6 +31,7 @@
         android:textColorHint="#8000a62c" />
 
     <EditText
+        android:id="@+id/passwordET"
         android:layout_width="249dp"
         android:layout_height="43dp"
         android:layout_alignParentTop="true"

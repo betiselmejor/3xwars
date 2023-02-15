@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2f2a2a"
     tools:context=".addFriend">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3xWARS"
+        android:fontFamily="@font/snippet"
+        android:textSize="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#00a62c"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/flecha"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a friend"
+        android:fontFamily="@font/snippet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/snippet"
+        android:hint="Username"
+        android:paddingLeft="5dp"
+        android:textColor="#00a62c"
+        android:textColorHint="#8000a62c" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#00a62c"
+        android:fontFamily="@font/snippet"
+        android:text="Send request"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggested profiles"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/snippet"
+        android:textSize="30dp"
+        android:textColor="#00a62c"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="290dp"
+        android:orientation="horizontal"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or add friends from"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="480dp"
+        android:fontFamily="@font/snippet"
+        android:textSize="30dp"
+        android:textColor="#00a62c"/>
+
+    <ImageView
+        android:id="@+id/facebookfriendIV"
+        android:layout_width="90dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="80dp"
+        tools:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/xboxfriendIV"
+        android:layout_width="90dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="80dp"
+        tools:srcCompat="@drawable/xbpx" />
+
+    <ImageView
+        android:id="@+id/googlefriendIV"
+        android:layout_width="90dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="297dp"
+        android:layout_marginBottom="80dp"
+        tools:srcCompat="@drawable/gogle" />
+
+</RelativeLayout>
