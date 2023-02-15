@@ -42,11 +42,11 @@
     <Button
         android:id="@+id/BattleAFriendbtn"
         android:layout_width="167dp"
-        android:layout_height="95dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="221dp"
         android:backgroundTint="#00a62c"
         android:fontFamily="@font/snippet"
         android:text="Battle a friend"
@@ -55,7 +55,7 @@
     <Button
         android:id="@+id/OfflineBattlebtn"
         android:layout_width="167dp"
-        android:layout_height="95dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
@@ -68,26 +68,80 @@
     <Button
         android:id="@+id/randomBattleebtn"
         android:layout_width="167dp"
-        android:layout_height="95dp"
+        android:layout_height="110dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="28dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="221dp"
+        android:layout_marginEnd="27dp"
         android:backgroundTint="#00a62c"
         android:fontFamily="@font/snippet"
         android:text="Random battle"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/optionsbtn"
-        android:layout_width="167dp"
-        android:layout_height="95dp"
+    <ImageView
+        android:layout_width="129dp"
+        android:layout_height="106dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="41dp"
+        android:background="#00ffffff"
+        android:src="@drawable/engranajev" />
+
+    <ImageView
+        android:id="@+id/profileIV"
+        android:layout_width="158dp"
+        android:layout_height="185dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/iconoperfil"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="60dp"/>
+
+    <ImageView
+        android:layout_width="158dp"
+        android:layout_height="185dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/bolsa"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="28dp"
-        android:layout_marginTop="358dp"
-        android:backgroundTint="#00a62c"
+        android:layout_marginBottom="60dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
         android:fontFamily="@font/snippet"
-        android:text=""
-        android:textSize="20dp" />
+        android:textColor="#00a62c"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="profile"
+        android:fontFamily="@font/snippet"
+        android:textColor="#00a62c"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="70dp"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:fontFamily="@font/snippet"
+        android:textColor="#00a62c"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="75dp"
+        android:textSize="25dp"
+
+        />
 
 
 </RelativeLayout>
