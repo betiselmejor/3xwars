@@ -66,6 +66,7 @@
         android:textColor="#00a62c"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAddfriend"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="290dp"
