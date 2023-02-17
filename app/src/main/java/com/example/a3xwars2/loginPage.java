@@ -12,6 +12,7 @@ public class loginPage extends AppCompatActivity {
 
     EditText usernameET, passwordET;
     Button login, offline;
+    String username;
 
 
     @Override
@@ -23,12 +24,16 @@ public class loginPage extends AppCompatActivity {
     }
 
     public void initall(){
+
+        usernameET = findViewById(R.id.usernameET);
+        passwordET = findViewById(R.id.passwordET);
         login = findViewById(R.id.loginbtn);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                username= String.valueOf(usernameET.getText());
                 Intent changeLoginLobby = new Intent(loginPage.this, lobby.class);
-                changeLoginLobby.putExtra("userName", usernameET.getText());
+                changeLoginLobby.putExtra("userName",username);
                 startActivity(changeLoginLobby);
             }
         });
@@ -42,7 +47,5 @@ public class loginPage extends AppCompatActivity {
             }
         });
 
-        usernameET = findViewById(R.id.usernameET);
-        passwordET = findViewById(R.id.passwordET);
     }
 }

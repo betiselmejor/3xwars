@@ -15,9 +15,10 @@ import com.example.a3xwars2.objetos.Usuario;
 
 import java.util.List;
 
-public class AdapterAddUser extends RecyclerView.Adapter<AdapterAddUser.MyViewHolder> {
+public class AdapterAddUser extends RecyclerView.Adapter<AdapterAddUser.MyViewHolder> implements View.OnClickListener {
 
     private List<Usuario> usuarios;
+    private View.OnClickListener listener;
 
     public AdapterAddUser(List<Usuario> usuarios) {
         this.usuarios = usuarios;
@@ -38,6 +39,18 @@ public class AdapterAddUser extends RecyclerView.Adapter<AdapterAddUser.MyViewHo
     public int getItemCount() {
         return usuarios.size();
     }
+
+    public void setOnclickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(listener!=null){
+            listener.onClick(v);
+        }
+    }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 

@@ -21,7 +21,10 @@ public class lobby extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lobby);
-        usernameS = getIntent().getExtras().getString("userName");
+
+        Intent i = this.getIntent();
+        bundle = i.getExtras();
+        usernameS = bundle.getString("userName");
 
 
         initall();

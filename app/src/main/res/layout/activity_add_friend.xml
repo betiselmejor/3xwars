@@ -32,6 +32,7 @@
         android:textColor="@color/white"/>
 
     <EditText
+        android:id="@+id/addFriendUsernameET"
         android:layout_width="290dp"
         android:layout_height="43dp"
         android:layout_alignParentTop="true"
@@ -45,7 +46,7 @@
         android:textColorHint="#8000a62c" />
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/addFriendSendRequestBTN"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
