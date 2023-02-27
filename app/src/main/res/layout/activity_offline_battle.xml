@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2f2a2a"
+    tools:context=".offlineBattle">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3xWARS"
+        android:fontFamily="@font/snippet"
+        android:textSize="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#00a62c"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/flecha"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline match"
+        android:fontFamily="@font/snippet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+
+<!--    tablero-->
+
+    <ImageView
+        android:id="@+id/tableroSkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/asd"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+<!--columna1-->
+    <ImageView
+        android:id="@+id/huecoC1L1n8"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp" />
+
+    <ImageView
+        android:id="@+id/huecoC1L2n3"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/huecoC1L3n4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="185dp"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="25dp"
+         />
+
+<!--    columna2-->
+
+    <ImageView
+        android:id="@+id/huecoC2L1n1"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="185dp" />
+
+
+    <ImageView
+        android:id="@+id/huecoC2L2n5"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+    <ImageView
+        android:id="@+id/huecoC2L3n9"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="185dp" />
+
+
+
+
+
+<!--    columna3-->
+
+
+    <ImageView
+        android:id="@+id/huecoC3L1n6"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="185dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"/>
+
+    <ImageView
+        android:id="@+id/huecoC3L2n7"
+        android:src="@drawable/espadaslaser"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"/>
+
+    <ImageView
+        android:id="@+id/huecoC3L3n2"
+        android:src="@drawable/espadaslaser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="185dp"/>
+
+</RelativeLayout>
