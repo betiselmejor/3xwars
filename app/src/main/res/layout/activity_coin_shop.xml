@@ -17,6 +17,21 @@
         android:layout_centerHorizontal="true"
         android:textColor="#00a62c"/>
 
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="302dp"
+        android:backgroundTint="#00a62c"
+        android:fontFamily="@font/snippet"
+        android:gravity="center"
+        android:text="Calculate" />
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -51,6 +66,7 @@
             />
 
         <EditText
+            android:id="@+id/dollarsET"
             android:layout_marginTop="0dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -92,6 +108,7 @@
             />
 
         <EditText
+            android:id="@+id/coinsET"
             android:layout_marginTop="0dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -120,7 +137,44 @@
 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="30dp" >
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="119dp"
+            android:layout_height="58dp"
+            android:src="@drawable/mastercardlogo" />
+
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="119dp"
+            android:layout_height="58dp"
+            android:src="@drawable/paypal" />
+
+        <ImageView
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="119dp"
+            android:layout_height="58dp"
+            android:src="@drawable/googleplaylogo" />
+
+        <ImageView
+            android:layout_gravity="right"
+            android:foregroundGravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_width="119dp"
+            android:layout_height="58dp"
+            android:src="@drawable/logovisa" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
 
 </RelativeLayout>

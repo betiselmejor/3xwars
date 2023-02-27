@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ public class addFriend extends AppCompatActivity {
 RecyclerView recyclerView;
 EditText usernameET;
 Button sendRequest;
+List<Usuario> usuarios = new ArrayList<>();
+
 
 
     @Override
@@ -30,16 +33,14 @@ Button sendRequest;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_friend);
 
+        addusers();
         initall();
     }
 
     public void initall(){
-        recyclerView = findViewById(R.id.recyclerAddfriend);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        ScaleCenterItemLayoutManager layoutManager = new ScaleCenterItemLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView.setLayoutManager(layoutManager);
 
-        addusers();
+
+
 
         usernameET = (EditText) findViewById(R.id.addFriendUsernameET);
 
@@ -55,7 +56,6 @@ Button sendRequest;
     }
      
     public void addusers(){
-        List<Usuario> usuarios = new ArrayList<>();
 
 
         for (int i = 0; i < 10; i++) {
@@ -63,13 +63,20 @@ Button sendRequest;
         }
 
         AdapterAddUser adapter = new AdapterAddUser(usuarios);
+
+        recyclerView = findViewById(R.id.recyclerAddfriend);
+        ScaleCenterItemLayoutManager layoutManager = new ScaleCenterItemLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerView.setLayoutManager(layoutManager);
+
         adapter.setOnclickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"hola",Toast.LENGTH_SHORT).show();
                 usernameET.setText(usuarios.get(recyclerView.getChildAdapterPosition(v)).getNom());
             }
         });
         recyclerView.setAdapter(adapter);
     }
+
     
 }

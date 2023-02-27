@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:background="#2f2a2a"
     tools:context=".offlineBattle">
 
@@ -45,16 +46,16 @@
 <!--columna1-->
     <ImageView
         android:id="@+id/huecoC1L1n8"
-        android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="185dp" />
+        android:layout_marginTop="185dp"
+        android:src="@drawable/espadaslaser" />
 
     <ImageView
         android:id="@+id/huecoC1L2n3"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginLeft="25dp"
         android:layout_centerVertical="true" />
@@ -64,7 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="185dp"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginLeft="25dp"
          />
@@ -74,7 +75,7 @@
     <ImageView
         android:id="@+id/huecoC2L1n1"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="185dp" />
@@ -83,7 +84,7 @@
     <ImageView
         android:id="@+id/huecoC2L2n5"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
@@ -92,7 +93,7 @@
     <ImageView
         android:id="@+id/huecoC2L3n9"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
@@ -108,7 +109,7 @@
     <ImageView
         android:id="@+id/huecoC3L1n6"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginTop="185dp"
         android:layout_alignParentRight="true"
@@ -118,7 +119,7 @@
         android:id="@+id/huecoC3L2n7"
         android:src="@drawable/espadaslaser"
         android:layout_centerVertical="true"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="25dp"/>
@@ -126,11 +127,84 @@
     <ImageView
         android:id="@+id/huecoC3L3n2"
         android:src="@drawable/espadaslaser"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="25dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="185dp"/>
+
+
+    <!--    BOTTOM-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="torn:"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:id="@+id/torn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"/>
+
+<!--    true BOTTOM-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvindicadorTornX"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#2f2a2a"
+        >
+        <TextView
+            android:id="@+id/xTornIndicador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:fontFamily="@font/snippet"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="100dp"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvindicadorTornO"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#2f2a2a"
+        card_view:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:id="@+id/oTornIndicador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O"
+            android:fontFamily="@font/snippet"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="100dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
 
 </RelativeLayout>
