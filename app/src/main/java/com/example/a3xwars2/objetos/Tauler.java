@@ -23,6 +23,10 @@ public class Tauler {
         cuadrat_magic[2][2]=2 ;
     }
 
+    public boolean comprobarVictoria(){
+       return true;
+    }
+
 
     public String[][] getTauler() {
         return tauler;
