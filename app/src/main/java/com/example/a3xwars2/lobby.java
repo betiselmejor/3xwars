@@ -46,9 +46,33 @@ public class lobby extends AppCompatActivity {
 
 
         message = (ImageView) findViewById(R.id.messagebtn);
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,Messages.class);
+                startActivity(a);
+            }
+        });
         options = (ImageView) findViewById(R.id.optionsbtn);
+        options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,options.class);
+                startActivity(a);
+            }
+        });
+
         shop = (ImageView) findViewById(R.id.shopbtn);
+
+
         profile = (ImageView) findViewById(R.id.profilebtn);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,perfil.class);
+                startActivity(a);
+            }
+        });
 
         username = (TextView) findViewById(R.id.usernameLobbyTV);
         username.setText(usernameS);

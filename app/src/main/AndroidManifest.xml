@@ -13,6 +13,27 @@
         android:theme="@style/Theme.3xwars2"
         tools:targetApi="31">
         <activity
+            android:name=".offlineBattleConfig"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Skins"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".WinActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".offlineBattle"
             android:exported="false">
             <meta-data

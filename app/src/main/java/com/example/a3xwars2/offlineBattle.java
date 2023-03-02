@@ -32,6 +32,9 @@ public class offlineBattle extends AppCompatActivity {
 
     ArrayList<ImageView> huecos;
 
+    boolean tresx=false;
+    boolean treso=false;
+
     String torn;
     private Handler manejador= new Handler(Looper.getMainLooper());
 
@@ -45,7 +48,7 @@ public class offlineBattle extends AppCompatActivity {
 
         initall();
 
-        partida();
+
     }
 
     public void initall(){
@@ -85,18 +88,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L1n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L1n8)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes,retira 1",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC1L1n8);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L1n8);
 
             }
         });
@@ -106,18 +98,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L2n3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L2n3)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC1L2n3);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L2n3);
 
             }
         });
@@ -127,18 +108,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L3n4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L3n4)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC1L3n4);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L3n4);
 
             }
         });
@@ -151,18 +121,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L1n1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L1n1)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC2L1n1);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L1n1);
 
             }
         });
@@ -172,18 +131,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L2n5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L2n5)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC2L2n5);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L2n5);
 
             }
         });
@@ -193,18 +141,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L3n9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L3n9)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC2L3n9);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L3n9);
 
             }
         });
@@ -216,18 +153,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L1n6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L1n6)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC3L1n6);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L1n6);
 
             }
         });
@@ -237,18 +163,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L2n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L2n7)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC3L2n7);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L2n7);
 
             }
         });
@@ -258,18 +173,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L3n2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L3n2)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-                        retiraFitxa();
-
-                    }else{
-                        click(huecoC3L3n2);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L3n2);
 
             }
         });
@@ -316,41 +220,27 @@ public class offlineBattle extends AppCompatActivity {
 
     }
 
-    public void partida(){
-        boolean victoria=false;
 
-
-
-
-    }
-
-    public void click(ImageView iv){
+    public void posarFitxa(ImageView iv){
 
         if (torn.equals("X")){
-            /* mira si el jugador X te les 3 fitxes colocades*/
-            if (X.getFitxes()==3){
-                Toast.makeText(getApplicationContext(),"TENS 3 FITXES X",Toast.LENGTH_SHORT).show();
-            }
+
 
 
             /*Si esta insertem a la casella la foto de la skin del jugador xi li sumem al contador de fitxes d'aquest 1 mes*/
             iv.setImageResource(X.getSkin());
+
             X.setFitxes(X.getFitxes()+1);
 
-            cambiaTorn();
+
         }else if(torn.equals("O")){
-            if (O.getFitxes()==3){
-                Toast.makeText(getApplicationContext(),"TENS 3 FITXES O",Toast.LENGTH_SHORT);
-            }
 
-            int drawableID= getResources().getIdentifier("trans","drawable",getPackageName());
 
-            if (drawableID == R.drawable.trans){
-                iv.setImageResource(O.getSkin());
+            iv.setImageResource(O.getSkin());
                 O.setFitxes(O.getFitxes()+1);
-            }
 
-            cambiaTorn();
+
+
         }
 
     }
@@ -368,25 +258,6 @@ public class offlineBattle extends AppCompatActivity {
 
         }
     return ocupada;
-    }
-
-    public boolean te3fitxes(){
-        boolean t3f=false;
-        if (torn.equals("X")){
-            if (X.getFitxes()==3){
-                t3f= true;
-            }else {
-                t3f= false;
-            }
-        }else if(torn.equals("O")){
-            if (O.getFitxes()==3){
-                t3f= true;
-            }else {
-                t3f= false;
-            }
-        }
-
-        return t3f;
     }
 
     public void retiraFitxa(){
@@ -588,18 +459,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L1n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L1n8)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC1L1n8);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L1n8);
 
             }
         });
@@ -610,18 +470,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L2n3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L2n3)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC1L2n3);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L2n3);
 
             }
         });
@@ -630,18 +479,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC1L3n4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC1L3n4)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC1L3n4);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC1L3n4);
 
             }
         });
@@ -653,18 +491,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L1n1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L1n1)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC2L1n1);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L1n1);
 
             }
         });
@@ -676,18 +503,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L2n5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L2n5)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC2L2n5);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L2n5);
 
             }
         });
@@ -697,18 +513,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC2L3n9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC2L3n9)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC2L3n9);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC2L3n9);
 
             }
         });
@@ -719,18 +524,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L1n6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L1n6)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC3L1n6);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L1n6);
 
             }
         });
@@ -741,18 +535,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L2n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L2n7)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC3L2n7);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L2n7);
 
             }
         });
@@ -764,18 +547,7 @@ public class offlineBattle extends AppCompatActivity {
         huecoC3L3n2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkOcupada(huecoC3L3n2)==false){
-                    if (te3fitxes()==true){
-                        Toast.makeText(getApplicationContext(),"tens 3 fitxes",Toast.LENGTH_SHORT).show();
-
-
-                    }else{
-                        click(huecoC3L3n2);
-                    }
-
-                }else{
-                    Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
-                }
+                clickarEspai(huecoC3L3n2);
 
             }
         });
@@ -783,25 +555,11 @@ public class offlineBattle extends AppCompatActivity {
 
 
 
+
+
     }
 
 
-    public int getDrawableId(Drawable drawable) {
-        Resources resources = getResources();
-        final int id;
-
-        if (drawable == null) {
-            id = 0;
-        } else {
-            String packageName = getPackageName();
-            String resourceName = resources.getResourceEntryName(drawable.getConstantState().newDrawable().getChangingConfigurations());
-            String resourceType = resources.getResourceTypeName(resources.getIdentifier(resourceName, "drawable", packageName));
-
-            id = resources.getIdentifier(resourceName, resourceType, packageName);
-        }
-
-        return id;
-    }
 
     public boolean esMateixaFoto(ImageView iv, int skinJugador){
         boolean retuurn;
@@ -814,5 +572,204 @@ public class offlineBattle extends AppCompatActivity {
         }
         return retuurn;
     }
+
+    public boolean seguentTe3fitxes(){
+        boolean t3f = false;
+
+        if (torn.equals("X")){
+            if (O.getFitxes()==3){
+                t3f=true;
+            }else{
+                t3f=false;
+            }
+        }else if(torn.equals("O")){
+            if (X.getFitxes()==3){
+                t3f=true;
+            }else{
+                t3f=false;
+            }
+        }
+
+        return t3f;
+    }
+
+    public void clickarEspai(ImageView iv){
+        if (checkOcupada(iv)==false){
+
+            posarFitxa(iv);
+
+comprovaVictoria();
+
+            if (seguentTe3fitxes()==true){
+                cambiaTorn();
+                Toast.makeText(getApplicationContext(),"Tens 3 fitxes, treu una de les que tens posades" + torn,Toast.LENGTH_SHORT).show();
+
+                retiraFitxa();
+
+
+            }else {
+                cambiaTorn();
+            }
+
+        }else{
+            Toast.makeText(getApplicationContext(),"OCUPADA,busca una altre",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void comprovaVictoria(){
+        boolean victoria=false;
+        Intent a = new Intent(offlineBattle.this, WinActivity.class);
+
+        Drawable transd = getResources().getDrawable(R.drawable.trans);
+        Drawable.ConstantState transCS= transd.getConstantState();
+
+//        drawables columna 1
+        Drawable.ConstantState c1_l1=huecoC1L1n8.getDrawable().getConstantState();
+        Drawable.ConstantState c1_l2=huecoC1L2n3.getDrawable().getConstantState();
+        Drawable.ConstantState c1_l3=huecoC1L3n4.getDrawable().getConstantState();
+
+        //        drawables columna 2
+        Drawable.ConstantState c2_l1=huecoC2L1n1.getDrawable().getConstantState();
+        Drawable.ConstantState c2_l2=huecoC2L2n5.getDrawable().getConstantState();
+        Drawable.ConstantState c2_l3=huecoC2L3n9.getDrawable().getConstantState();
+
+        //        drawables columna 3
+        Drawable.ConstantState c3_l1=huecoC3L1n6.getDrawable().getConstantState();
+        Drawable.ConstantState c3_l2=huecoC3L2n7.getDrawable().getConstantState();
+        Drawable.ConstantState c3_l3=huecoC3L3n2.getDrawable().getConstantState();
+
+        if ( !c1_l1.equals(transCS) &&       c1_l1.equals(c1_l2) && c1_l2.equals(c1_l3)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",X.getSkin());
+                    }else{
+                        a.putExtra("skin",O.getSkin());
+                    }
+                    a.putExtra("guanyador",torn);
+
+                    startActivity(a);
+                }
+            },1000);
+
+        }else if (!c2_l1.equals(transCS) &&       c2_l1.equals(c2_l2) && c2_l2.equals(c2_l3)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+
+        }else if (!c3_l1.equals(transCS) &&       c3_l1.equals(c3_l2) && c3_l2.equals(c3_l3)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }/*lineas*/else if (!c1_l1.equals(transCS) &&       c1_l1.equals(c2_l1) && c3_l1.equals(c2_l1)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }else if (!c1_l2.equals(transCS) &&  c1_l2.equals(c2_l2) && c3_l2.equals(c2_l2)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }else if (!c1_l3.equals(transCS) &&c1_l3.equals(c2_l3) && c3_l3.equals(c2_l3)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }/*diagonal*/else if (!c1_l1.equals(transCS) &&c1_l1.equals(c2_l2) && c3_l3.equals(c2_l2)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn=="X"){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }else if (!c3_l1.equals(transCS) && c3_l1.equals(c2_l2) && c1_l3.equals(c2_l2)){
+            manejador.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (torn.equals("X")){
+                        a.putExtra("skin",O.getSkin());
+                        a.putExtra("guanyador","O");
+                    }else{
+                        a.putExtra("skin",X.getSkin());
+                        a.putExtra("guanyador","X");
+                    }
+
+
+                    startActivity(a);
+                }
+            },1000);
+        }
+
+    }
+
 
 }

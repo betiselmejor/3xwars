@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2f2a2a"
+    tools:context=".WinActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3xWARS"
+        android:fontFamily="@font/snippet"
+        android:textSize="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#00a62c"/>
+
+    <TextView
+        android:id="@+id/winnerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O WINS"
+        android:fontFamily="@font/snippet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
+
+
+
+    <ImageView
+        android:id="@+id/winnerSkin"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/espadasx"/>
+
+    <Button
+        android:id="@+id/goBackLobby"
+        android:layout_width="300dp"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Go to Lobby"
+        android:fontFamily="@font/snippet"
+        android:layout_marginBottom="150dp"
+        android:textSize="20dp"
+        android:backgroundTint="#00a62c" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="300dp"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Play again"
+        android:fontFamily="@font/snippet"
+        android:layout_marginBottom="75dp"
+        android:textSize="20dp"
+        android:backgroundTint="#00a62c" />
+
+</RelativeLayout>
