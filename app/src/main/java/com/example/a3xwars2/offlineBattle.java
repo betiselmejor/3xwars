@@ -643,14 +643,7 @@ comprovaVictoria();
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",X.getSkin());
-                    }else{
-                        a.putExtra("skin",O.getSkin());
-                    }
-                    a.putExtra("guanyador",torn);
-
-                    startActivity(a);
+                    enviaVictoria();
                 }
             },1000);
 
@@ -658,16 +651,8 @@ comprovaVictoria();
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
 
@@ -675,100 +660,68 @@ comprovaVictoria();
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }/*lineas*/else if (!c1_l1.equals(transCS) &&       c1_l1.equals(c2_l1) && c3_l1.equals(c2_l1)){
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }else if (!c1_l2.equals(transCS) &&  c1_l2.equals(c2_l2) && c3_l2.equals(c2_l2)){
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }else if (!c1_l3.equals(transCS) &&c1_l3.equals(c2_l3) && c3_l3.equals(c2_l3)){
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }/*diagonal*/else if (!c1_l1.equals(transCS) &&c1_l1.equals(c2_l2) && c3_l3.equals(c2_l2)){
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn=="X"){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }else if (!c3_l1.equals(transCS) && c3_l1.equals(c2_l2) && c1_l3.equals(c2_l2)){
             manejador.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (torn.equals("X")){
-                        a.putExtra("skin",O.getSkin());
-                        a.putExtra("guanyador","O");
-                    }else{
-                        a.putExtra("skin",X.getSkin());
-                        a.putExtra("guanyador","X");
-                    }
+                    enviaVictoria();
 
-
-                    startActivity(a);
                 }
             },1000);
         }
 
+    }
+
+
+    public void enviaVictoria(){
+        Intent a = new Intent(offlineBattle.this, WinActivity.class);
+
+        if (torn=="X"){
+            a.putExtra("skin",O.getSkin());
+            a.putExtra("guanyador","O");
+        }else{
+            a.putExtra("skin",X.getSkin());
+            a.putExtra("guanyador","X");
+        }
+
+
+        startActivity(a);
     }
 
 

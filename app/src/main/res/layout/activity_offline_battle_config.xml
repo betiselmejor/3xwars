@@ -39,6 +39,7 @@
         android:layout_height="112dp" >
 
         <TextView
+            android:id="@+id/vsiaTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VS I.A"
@@ -51,6 +52,7 @@
 
 
         <TextView
+            android:id="@+id/easyModeTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Easy\nmode"
@@ -62,6 +64,7 @@
             android:layout_marginBottom="20dp"
             />
         <TextView
+            android:id="@+id/betisModeTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Betis\nmode"
@@ -86,6 +89,7 @@
 
 
         <TextView
+            android:id="@+id/dosplayers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2 Players"
@@ -99,6 +103,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:id="@+id/gobtn"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"

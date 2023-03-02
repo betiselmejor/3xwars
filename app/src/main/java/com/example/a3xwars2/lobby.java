@@ -41,8 +41,32 @@ public class lobby extends AppCompatActivity {
         });
 
         battleAFriend = (Button) findViewById(R.id.BattleAFriendbtn);
+        battleAFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,TODO.class);
+                startActivity(a);
+            }
+        });
+
         offlineBattle = (Button) findViewById(R.id.offlineBattlebtn);
+        offlineBattle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,offlineBattleConfig.class);
+                startActivity(a);
+            }
+        });
+
         randomBattle = (Button) findViewById(R.id.randomBattleebtn);
+        randomBattle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,TODO.class);
+                startActivity(a);
+            }
+        });
+
 
 
         message = (ImageView) findViewById(R.id.messagebtn);

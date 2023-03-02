@@ -44,7 +44,7 @@ public class loginPage extends AppCompatActivity {
         offline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(loginPage.this,offlineBattle.class);
+                Intent a = new Intent(loginPage.this,offlineBattleConfig.class);
                 startActivity(a);
             }
         });
