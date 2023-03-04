@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ public class addFriend extends AppCompatActivity {
 RecyclerView recyclerView;
 EditText usernameET;
 Button sendRequest;
+ImageView backArrow;
 List<Usuario> usuarios = new ArrayList<>();
 
 
@@ -50,6 +53,15 @@ List<Usuario> usuarios = new ArrayList<>();
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Request send to " + String.valueOf(usernameET.getText()),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        backArrow=(ImageView) findViewById(R.id.flechaenrereAddafriend);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(addFriend.this,lobby.class);
+                startActivity(a);
             }
         });
 

@@ -17,6 +17,7 @@
         android:textColor="#00a62c"/>
 
     <ImageView
+        android:id="@+id/flechaenrereOfflinebattleconfiguration"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/flecha"/>

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class offlineBattleConfig extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class offlineBattleConfig extends AppCompatActivity {
     TextView vsiaTV,easyModeTv,betisMode,dosplayers;
     Button gobtn;
     String tipusPartida="a";
+    ImageView backArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,15 @@ public class offlineBattleConfig extends AppCompatActivity {
     }
 
     public void init(){
+        backArrow=(ImageView) findViewById(R.id.flechaenrereOfflinebattleconfiguration);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(offlineBattleConfig.this,lobby.class);
+                startActivity(a);
+            }
+        });
+
         vsiaTV = (TextView) findViewById(R.id.vsiaTV);
 
         easyModeTv = (TextView) findViewById(R.id.easyModeTV);
@@ -105,7 +116,7 @@ public class offlineBattleConfig extends AppCompatActivity {
         Intent b = new Intent(offlineBattleConfig.this,TODO.class);
         Intent c = new Intent(offlineBattleConfig.this,offlineBattle.class);
 
-        if (tipusPartida.equals("easyomde")){
+        if (tipusPartida.equals("easymode")){
             startActivity(a);
         }if (tipusPartida.equals("betismode")){
             startActivity(b);

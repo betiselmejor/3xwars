@@ -18,10 +18,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#00a62c"/>
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/flecha"/>
+
 
     <TextView
         android:layout_width="wrap_content"
