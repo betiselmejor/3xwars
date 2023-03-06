@@ -56,8 +56,30 @@ public class Skins extends AppCompatActivity {
 
 
         fieldskins=(RecyclerView) findViewById(R.id.fieldskins);
+        addfieldskins();
 
 
+    }
+
+    public void addfieldskins(){
+        Skin rojo= new Skin(R.drawable.tablerorojo,"Red");
+        Skin azul= new Skin(R.drawable.tableroazul,"Blue");
+        Skin winsiete= new Skin(R.drawable.winsiete,"Win 7");
+        Skin rojoazul= new Skin(R.drawable.tableroazulrojo,"Degrade");
+
+
+
+        skinsfield.add(rojo);
+        skinsfield.add(azul);
+        skinsfield.add(winsiete);
+        skinsfield.add(rojoazul);
+
+
+        AdapterSkins1 adapter = new AdapterSkins1(skinsfield);
+
+        ScaleCenterItemLayoutManager layoutManager = new ScaleCenterItemLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        fieldskins.setLayoutManager(layoutManager);
+        fieldskins.setAdapter(adapter);
     }
 
     public void addxSkins(){

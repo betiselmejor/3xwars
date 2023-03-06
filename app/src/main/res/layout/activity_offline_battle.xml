@@ -41,6 +41,7 @@
         android:layout_centerVertical="true"/>
 
 <!--columna1-->
+
     <ImageView
         android:id="@+id/huecoC1L1n8"
         android:layout_width="80dp"
