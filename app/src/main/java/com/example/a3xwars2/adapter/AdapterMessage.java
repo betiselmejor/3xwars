@@ -50,27 +50,32 @@ public class AdapterMessage extends RecyclerView.Adapter<AdapterMessage.MyViewHo
             super(itemView);
 
             message = itemView.findViewById(R.id.messageType);
-            message.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    // no se requiere acción antes del cambio de texto
-                }
-
-                @Override
-                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    // comprueba si el ancho del TextView es mayor que el ancho máximo
-                    if (message.getPaint().measureText(charSequence.toString()) > message.getMaxWidth()) {
-                        // comienza la animación si el ancho del texto es mayor que el ancho máximo
-                        Animation animation = AnimationUtils.loadAnimation(emisor.getContext(), R.anim.text_scroll);
-                        message.startAnimation(animation);
-                    }
-                }
-
-                @Override
-                public void afterTextChanged(Editable editable) {
-                    // no se requiere acción después del cambio de texto
-                }
-            });
+//            message.addTextChangedListener(new TextWatcher() {
+//                @Override
+//                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+////                    if (message.getPaint().measureText(charSequence.toString()) > 170) {
+////                        // comienza la animación si el ancho del texto es mayor que el ancho máximo
+////                        Animation animation = AnimationUtils.loadAnimation(emisor.getContext(), R.anim.text_scroll);
+////                        message.startAnimation(animation);
+////                    }
+//                }
+//
+//                @Override
+//                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//                    // comprueba si el ancho del TextView es mayor que el ancho máximo
+//                    if (message.getPaint().measureText(charSequence.toString()) > 255) {
+//                        // comienza la animación si el ancho del texto es mayor que el ancho máximo
+//                        Animation animation = AnimationUtils.loadAnimation(emisor.getContext(), R.anim.text_scroll);
+//                        message.startAnimation(animation);
+//                    }
+//                }
+//
+//                @Override
+//                public void afterTextChanged(Editable editable) {
+//                    // no se requiere acción después del cambio de texto
+//
+//                }
+//            });
             emisor = itemView.findViewById(R.id.emisor);
         }
             void bindData(final Message m){
