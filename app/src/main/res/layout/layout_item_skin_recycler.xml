@@ -2,6 +2,7 @@
 
 
 <androidx.cardview.widget.CardView
+    android:id="@+id/cardviewSkin"
     android:layout_gravity="center|top"
     android:layout_width="150dp"
     android:layout_height="150dp"

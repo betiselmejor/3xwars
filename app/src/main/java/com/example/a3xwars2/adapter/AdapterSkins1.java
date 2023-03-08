@@ -1,6 +1,8 @@
 package com.example.a3xwars2.adapter;
 
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a3xwars2.R;
+import com.example.a3xwars2.SelectListner;
 import com.example.a3xwars2.objetos.Skin;
 import com.example.a3xwars2.objetos.Usuario;
 
@@ -21,9 +25,15 @@ public class AdapterSkins1 extends RecyclerView.Adapter<AdapterSkins1.MyViewHold
 
     private List<Skin> skins;
 
+    private SelectListner listner;
 
     public AdapterSkins1(List<Skin> skins) {
         this.skins = skins;
+    }
+
+    public AdapterSkins1(List<Skin> skins, SelectListner listner) {
+        this.skins = skins;
+        this.listner = listner;
     }
 
     @NonNull
@@ -33,8 +43,17 @@ public class AdapterSkins1 extends RecyclerView.Adapter<AdapterSkins1.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.bindData(skins.get(position));
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listner.onItemClicked(skins.get(position));
+            }
+        });
+
+
     }
 
     @Override
@@ -48,12 +67,14 @@ public class AdapterSkins1 extends RecyclerView.Adapter<AdapterSkins1.MyViewHold
 
         ImageView skin;
         TextView nombreskin;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             skin = itemView.findViewById(R.id.recyclerskinsSkin);
             nombreskin = itemView.findViewById(R.id.recyclerskinsSkinName);
+            cardView = itemView.findViewById(R.id.cardviewSkin);
         }
         void bindData(final Skin s){
             skin.setImageResource(s.getSkin());

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -52,8 +53,13 @@ public class offlineBattle extends AppCompatActivity {
     }
 
     public void initall(){
-         X= new Jugador(R.drawable.espadaslaser);
-         O= new Jugador(R.drawable.escudo);
+        SharedPreferences preferences = getSharedPreferences("skins",MODE_PRIVATE);
+        int skinX= preferences.getInt("skinX",R.drawable.hachasazules);
+        int skinO= preferences.getInt("skinO",R.drawable.escudo);
+        int skinT= preferences.getInt("skinT",R.drawable.asd);
+
+         X= new Jugador(skinX);
+         O= new Jugador(skinO);
 
         tornTV= (TextView) findViewById(R.id.torn);
         torn = initTorn();
@@ -76,7 +82,7 @@ public class offlineBattle extends AppCompatActivity {
 
         indicadorTornX=(CardView) findViewById(R.id.cvindicadorTornX);
 
-        Tauler tauler= new Tauler(R.drawable.tauler);
+        Tauler tauler= new Tauler(skinT);
         tablero = (ImageView) findViewById(R.id.tableroSkin);
         tablero.setImageResource(tauler.getSkin());
 

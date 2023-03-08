@@ -16,12 +16,14 @@ public class offlineBattleConfig extends AppCompatActivity {
     Button gobtn;
     String tipusPartida="a";
     ImageView backArrow;
+    String beforeActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offline_battle_config);
 
+        beforeActivity = getIntent().getStringExtra("message");
 
         init();
     }
@@ -31,8 +33,14 @@ public class offlineBattleConfig extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(offlineBattleConfig.this,lobby.class);
-                startActivity(a);
+                if (beforeActivity.equals("activityLogin")){
+                    Intent a = new Intent(offlineBattleConfig.this,loginPage.class);
+                    startActivity(a);
+                }else if (beforeActivity.equals("activityLobby")){
+                    Intent a = new Intent(offlineBattleConfig.this,lobby.class);
+                    startActivity(a);
+                }
+
             }
         });
 

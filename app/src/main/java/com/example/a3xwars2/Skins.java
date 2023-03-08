@@ -5,10 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.icu.text.DateIntervalFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.a3xwars2.LayoutManager.ScaleCenterItemLayoutManager;
 import com.example.a3xwars2.adapter.AdapterSkins1;
@@ -17,7 +20,7 @@ import com.example.a3xwars2.objetos.Skin;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Skins extends AppCompatActivity {
+public class Skins extends AppCompatActivity implements SelectListner {
     RecyclerView xskins,oskins,fieldskins;
     List<Skin> skinsx = new ArrayList<>();
     List<Skin> skinso = new ArrayList<>();
@@ -62,10 +65,10 @@ public class Skins extends AppCompatActivity {
     }
 
     public void addfieldskins(){
-        Skin rojo= new Skin(R.drawable.tablerorojo,"Red");
-        Skin azul= new Skin(R.drawable.tableroazul,"Blue");
-        Skin winsiete= new Skin(R.drawable.winsiete,"Win 7");
-        Skin rojoazul= new Skin(R.drawable.tableroazulrojo,"Degrade");
+        Skin rojo= new Skin(R.drawable.tablerorojo,"Red","T");
+        Skin azul= new Skin(R.drawable.tableroazul,"Blue","T");
+        Skin winsiete= new Skin(R.drawable.winsiete,"Win 7","T");
+        Skin rojoazul= new Skin(R.drawable.tableroazulrojo,"Degrade","T");
 
 
 
@@ -75,7 +78,7 @@ public class Skins extends AppCompatActivity {
         skinsfield.add(rojoazul);
 
 
-        AdapterSkins1 adapter = new AdapterSkins1(skinsfield);
+        AdapterSkins1 adapter = new AdapterSkins1(skinsfield,this);
 
         ScaleCenterItemLayoutManager layoutManager = new ScaleCenterItemLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         fieldskins.setLayoutManager(layoutManager);
@@ -83,11 +86,11 @@ public class Skins extends AppCompatActivity {
     }
 
     public void addxSkins(){
-        Skin espadasx= new Skin(R.drawable.espadasx,"espadasx");
-        Skin espadasLaser= new Skin(R.drawable.espadaslaser,"Espadas L.");
-        Skin hachas= new Skin(R.drawable.hachas,"Hachas");
-        Skin hachasrojas= new Skin(R.drawable.hachasrojas,"Hachas R.");
-        Skin hachasazules= new Skin(R.drawable.hachasazules,"Hachas A.");
+        Skin espadasx= new Skin(R.drawable.espadasx,"espadasx","X");
+        Skin espadasLaser= new Skin(R.drawable.espadaslaser,"Espadas L.","X");
+        Skin hachas= new Skin(R.drawable.hachas,"Hachas","X");
+        Skin hachasrojas= new Skin(R.drawable.hachasrojas,"Hachas R.","X");
+        Skin hachasazules= new Skin(R.drawable.hachasazules,"Hachas A.","X");
 
         skinsx.add(espadasx);
         skinsx.add(espadasLaser);
@@ -95,25 +98,44 @@ public class Skins extends AppCompatActivity {
         skinsx.add(hachasrojas);
         skinsx.add(hachasazules);
 
-        AdapterSkins1 adapter = new AdapterSkins1(skinsx);
+        AdapterSkins1 adapter = new AdapterSkins1(skinsx,this);
         xskins.setLayoutManager( new LinearLayoutManager(getApplicationContext()));
 
         xskins.setAdapter(adapter);
     }
 
     public void addoSkins(){
-        Skin escudo= new Skin(R.drawable.escudo,"Escudo");
-        Skin bola= new Skin(R.drawable.pelota,"Bola F.");
-        Skin bolabetis= new Skin(R.drawable.bolabetislila,"Bola F.B.");
-        Skin bolabetislila= new Skin(R.drawable.bolabetisverde,"Bola F.B.L.");
+        Skin escudo= new Skin(R.drawable.escudo,"Escudo","O");
+        Skin bola= new Skin(R.drawable.pelota,"Bola F.","O");
+        Skin bolabetis= new Skin(R.drawable.bolabetislila,"Bola F.B.","O");
+        Skin bolabetislila= new Skin(R.drawable.bolabetisverde,"Bola F.B.L.","O");
 
         skinso.add(escudo);
         skinso.add(bola);
         skinso.add(bolabetis);
         skinso.add(bolabetislila);
 
-        AdapterSkins1 adapter = new AdapterSkins1(skinso);
+        AdapterSkins1 adapter = new AdapterSkins1(skinso,this);
         oskins.setLayoutManager( new LinearLayoutManager(getApplicationContext()));
         oskins.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClicked(Skin skin) {
+
+        SharedPreferences preferences = getSharedPreferences("skins",MODE_PRIVATE);
+
+        SharedPreferences.Editor editor= preferences.edit();
+        if (skin.getType().equals("X")){
+            editor.putInt("skinX",skin.getSkin());
+            Toast.makeText(getApplicationContext(),skin.getNom()+"Selected for x",Toast.LENGTH_SHORT).show();
+        }else if (skin.getType().equals("O")){
+            editor.putInt("skinO",skin.getSkin());
+            Toast.makeText(getApplicationContext(),skin.getNom()+"Selected for o",Toast.LENGTH_SHORT).show();
+        }else if (skin.getType().equals("T")){
+            editor.putInt("skinT",skin.getSkin());
+            Toast.makeText(getApplicationContext(),skin.getNom()+"Selected for table",Toast.LENGTH_SHORT).show();
+        }
+        editor.commit();
     }
 }

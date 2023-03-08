@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         inActivo= true;
                     }
+                    finish();
                 }
             });
             hilo.start();

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2f2a2a"
+    tools:context=".Register">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3xWARS"
+        android:fontFamily="@font/snippet"
+        android:textSize="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#00a62c"/>
+
+    <ImageView
+        android:id="@+id/flechaenrereRegister"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/flecha"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:fontFamily="@font/snippet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/usernameET2"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="134dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/snippet"
+        android:hint="Username"
+        android:paddingLeft="5dp"
+        android:textColor="#00a62c"
+        android:textColorHint="#8000a62c" />
+
+    <EditText
+        android:id="@+id/passwordET2"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/snippet"
+        android:hint="Password"
+        android:paddingLeft="5dp"
+        android:textColor="#00a62c"
+        android:textColorHint="#8000a62c" />
+
+    <EditText
+        android:id="@+id/passwordET22"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="282dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/snippet"
+        android:hint="Repeat Password"
+        android:paddingLeft="5dp"
+        android:textColor="#00a62c"
+        android:textColorHint="#8000a62c" />
+
+    <EditText
+        android:id="@+id/gmail2"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="356dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/snippet"
+        android:hint="Gmail"
+        android:paddingLeft="5dp"
+        android:textColor="#00a62c"
+        android:textColorHint="#8000a62c"/>
+
+    <Button
+        android:id="@+id/loginbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:backgroundTint="#00a62c"
+        android:fontFamily="@font/snippet"
+        android:text="Register"
+        android:textSize="20dp" />
+
+</RelativeLayout>

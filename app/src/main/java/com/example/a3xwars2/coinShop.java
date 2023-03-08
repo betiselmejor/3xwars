@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class coinShop extends AppCompatActivity {
 
-EditText coinsET, dollarsET;
+EditText dollarsET;
+TextView coinsET;
 Button calculate;
     ImageView backArrow;
 
@@ -21,7 +23,7 @@ Button calculate;
         setContentView(R.layout.activity_coin_shop);
 
         calculate = (Button) findViewById(R.id.calculateButton);
-        coinsET = (EditText) findViewById(R.id.coinsET);
+        coinsET = (TextView) findViewById(R.id.coinsET);
         dollarsET = (EditText) findViewById(R.id.dollarsET);
 
         backArrow=(ImageView) findViewById(R.id.flechaenrereCoinshop);
@@ -32,5 +34,23 @@ Button calculate;
                 startActivity(a);
             }
         });
+
+        init();
+    }
+
+    public void init(){
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcular();
+            }
+        });
+    }
+
+    public void calcular(){
+        double dollars = Double.parseDouble(String.valueOf(dollarsET.getText()));
+        double coins = dollars*1000;
+
+        coinsET.setText(String.valueOf(coins));
     }
 }

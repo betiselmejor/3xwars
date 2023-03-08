@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class loginPage extends AppCompatActivity {
 
     EditText usernameET, passwordET;
+    TextView createAccount;
     Button login, offline;
     String username;
 
@@ -25,6 +27,8 @@ public class loginPage extends AppCompatActivity {
 
     public void initall(){
 
+
+
         usernameET = findViewById(R.id.usernameET);
         passwordET = findViewById(R.id.passwordET);
         login = findViewById(R.id.loginbtn);
@@ -38,6 +42,15 @@ public class loginPage extends AppCompatActivity {
             }
         });
 
+        createAccount=(TextView) findViewById(R.id.register);
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(loginPage.this,Register.class);
+                startActivity(a);
+            }
+        });
+
 
 
         offline = findViewById(R.id.goOflinebtn);
@@ -45,6 +58,7 @@ public class loginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent a = new Intent(loginPage.this,offlineBattleConfig.class);
+                a.putExtra("message","activityLogin");
                 startActivity(a);
             }
         });

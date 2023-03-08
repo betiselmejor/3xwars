@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class addFriend extends AppCompatActivity {
+
 RecyclerView recyclerView;
 EditText usernameET;
 Button sendRequest;

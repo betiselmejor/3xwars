@@ -20,6 +20,7 @@ import java.util.List;
 public class perfil extends AppCompatActivity {
     ImageView backArrow;
     Button seeyourskins;
+    ImageView shop;
 
 
     @Override
@@ -32,6 +33,15 @@ public class perfil extends AppCompatActivity {
     }
 
     public void initall(){
+
+        shop = (ImageView) findViewById(R.id.shopProfile);
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(perfil.this,coinShop.class);
+                startActivity(a);
+            }
+        });
 
         backArrow=(ImageView) findViewById(R.id.flechaenrerePerfil);
         backArrow.setOnClickListener(new View.OnClickListener() {

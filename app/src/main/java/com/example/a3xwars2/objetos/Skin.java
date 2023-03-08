@@ -5,8 +5,16 @@ public class Skin {
 
     String nom;
 
+    String type;
+
     //////////////////////////////////////////////////////////////
 
+
+    public Skin(int skin, String nom, String type) {
+        this.skin = skin;
+        this.nom = nom;
+        this.type = type;
+    }
 
     public Skin(int skin, String nom) {
         this.skin = skin;
@@ -33,5 +41,13 @@ public class Skin {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

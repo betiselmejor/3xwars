@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
+        android:text=""
         android:fontFamily="@font/snippet"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
@@ -91,6 +91,7 @@
         android:textSize="30dp" />
 
     <ImageView
+        android:id="@+id/shopProfile"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_alignParentEnd="true"

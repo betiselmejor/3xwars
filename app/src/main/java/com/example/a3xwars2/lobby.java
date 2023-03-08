@@ -54,6 +54,7 @@ public class lobby extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent a = new Intent(lobby.this,offlineBattleConfig.class);
+                a.putExtra("message","activityLobby");
                 startActivity(a);
             }
         });
@@ -87,6 +88,13 @@ public class lobby extends AppCompatActivity {
         });
 
         shop = (ImageView) findViewById(R.id.shopbtn);
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(lobby.this,coinShop.class);
+                startActivity(a);
+            }
+        });
 
 
         profile = (ImageView) findViewById(R.id.profilebtn);

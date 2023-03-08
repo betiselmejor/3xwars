@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:backgroundTint="#00a62c"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/messageType"
+        android:layout_width="wrap_content"
+        android:maxWidth="170dp"
+        android:layout_height="wrap_content"
+        android:text="Message Type"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/snippet"/>
+
+    <TextView
+        android:id="@+id/emisor"
+        android:layout_width="wrap_content"
+        android:maxWidth="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Emisor"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/acceptTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:text="Accept"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/declineTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Decline"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
